@@ -1,0 +1,90 @@
+.contact {
+  padding: 6rem 2rem;
+  background: var(--green-dark);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #fff;
+  display: block;
+  transition: background 0.25s, transform 0.25s;
+}
+
+a.contact-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: translateY(-5px);
+}
+
+.contact-card--static {
+  cursor: default;
+}
+
+.contact-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+  color: #fff;
+}
+
+.contact-card p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.contact-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.contact-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-icon--whatsapp {
+  background: rgba(37, 211, 102, 0.18);
+  color: #25d366;
+}
+
+.contact-icon--email {
+  background: rgba(99, 179, 237, 0.18);
+  color: #63b3ed;
+}
+
+.contact-icon--instagram {
+  background: rgba(240, 100, 60, 0.18);
+  color: #f0643c;
+}
+
+.contact-icon--location {
+  background: rgba(245, 200, 66, 0.18);
+  color: var(--star-gold);
+}
