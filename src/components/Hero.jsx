@@ -1,4 +1,4 @@
-import heroImg from '../assets/image3.png'
+import heroImg from '../assets/cabinQuality.jpg'
 import './Hero.css'
 
 export default function Hero() {
@@ -11,13 +11,13 @@ export default function Hero() {
       <div className="hero-overlay" />
       <div className="hero-content">
         <p className="hero-pre">Las Sierras de Córdoba</p>
-        <h1 className="hero-title">Cabañas<br />Estrellas</h1>
+        <h1 className="hero-title">Cabañas<br />5 Estrellas</h1>
         <div className="hero-stars" aria-label="5 estrellas">★★★★★</div>
         <p className="hero-subtitle">
           Tu refugio en la montaña, donde la naturaleza y el confort se encuentran
         </p>
         <a
-          href="https://wa.me/REEMPLAZAR_CON_TU_NUMERO"
+          href="https://wa.me/5493516205470"
           className="hero-cta"
           target="_blank"
           rel="noopener noreferrer"

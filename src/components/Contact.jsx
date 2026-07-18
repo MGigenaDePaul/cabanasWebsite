@@ -14,7 +14,7 @@ export default function Contact() {
 
         <div className="contact-grid">
           <a
-            href="https://wa.me/REEMPLAZAR_CON_TU_NUMERO"
+            href="https://wa.me/5493516205470"
             className="contact-card"
             target="_blank"
             rel="noopener noreferrer"
@@ -25,11 +25,11 @@ export default function Contact() {
               </svg>
             </div>
             <h3>WhatsApp</h3>
-            <p>+54 9 XXX XXX XXXX</p>
+            <p>+54 9 351 620 5470</p>
           </a>
 
           <a
-            href="mailto:info@cabanasestrellas.com"
+            href="mailto:cabin5estrellas@gmail.com"
             className="contact-card"
           >
             <div className="contact-icon contact-icon--email">
@@ -39,11 +39,11 @@ export default function Contact() {
               </svg>
             </div>
             <h3>Email</h3>
-            <p>info@cabanasestrellas.com</p>
+            <p>cabin5estrellas@gmail.com</p>
           </a>
 
           <a
-            href="https://instagram.com/cabanasestrellas"
+            href="https://instagram.com/cab_5estrellas"
             className="contact-card"
             target="_blank"
             rel="noopener noreferrer"
@@ -54,10 +54,15 @@ export default function Contact() {
               </svg>
             </div>
             <h3>Instagram</h3>
-            <p>@cabanasestrellas</p>
+            <p>@cab_5estrellas</p>
           </a>
 
-          <div className="contact-card contact-card--static">
+          <a
+            href="https://maps.app.goo.gl/ytby6VtuNn7if7Ps7"
+            className="contact-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="contact-icon contact-icon--location">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
@@ -66,7 +71,7 @@ export default function Contact() {
             </div>
             <h3>Ubicación</h3>
             <p>Sierras de Córdoba, Argentina</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
