@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import './Navbar.css'
 
 export default function Navbar() {
@@ -16,10 +17,10 @@ export default function Navbar() {
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar-inner">
-        <a href="#inicio" className="navbar-logo" onClick={closeMenu}>
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <span className="navbar-star">★</span>
-          Cabañas Estrellas
-        </a>
+          Cabañas 5 Estrellas
+        </Link>
 
         <button
           className={`navbar-toggle${menuOpen ? ' navbar-toggle--open' : ''}`}
@@ -32,9 +33,9 @@ export default function Navbar() {
         </button>
 
         <nav className={`navbar-nav${menuOpen ? ' navbar-nav--open' : ''}`}>
-          <a href="#cabanas" onClick={closeMenu}>Cabañas</a>
-          <a href="#galeria" onClick={closeMenu}>Galería</a>
-          <a href="#contacto" onClick={closeMenu} className="navbar-nav-cta">Contacto</a>
+          <NavLink to="/cabanas" onClick={closeMenu}>Cabañas</NavLink>
+          <NavLink to="/galeria" onClick={closeMenu}>Galería</NavLink>
+          <NavLink to="/contacto" onClick={closeMenu} className="navbar-nav-cta">Contacto</NavLink>
         </nav>
       </div>
     </header>

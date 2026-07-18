@@ -11,7 +11,7 @@ const photos = [
 
 export default function Gallery() {
   return (
-    <section id="galeria" className="gallery">
+    <section className="gallery">
       <div className="section-container">
         <div className="section-header">
           <span className="section-tag">Instalaciones</span>

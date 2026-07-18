@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom'
 import heroImg from '../assets/cabinQuality.jpg'
-import './Hero.css'
+import './Home.css'
 
-export default function Hero() {
+export default function Home() {
   return (
     <section
-      id="inicio"
       className="hero"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
@@ -29,12 +29,12 @@ export default function Hero() {
         </a>
       </div>
 
-      <a href="#cabanas" className="hero-scroll" aria-label="Continuar">
+      <Link to="/cabanas" className="hero-scroll" aria-label="Ver cabañas">
         <span>Ver más</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <polyline points="6 9 12 15 18 9" />
         </svg>
-      </a>
+      </Link>
     </section>
   )
 }

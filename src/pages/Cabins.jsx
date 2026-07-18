@@ -3,7 +3,6 @@ import './Cabins.css'
 const cabins = [
   {
     id: 1,
-    name: 'Cabaña Cielo',
     icon: '🌙',
     gradient: 'linear-gradient(135deg, #2d5016 0%, #4a7c20 100%)',
     capacity: 2,
@@ -13,7 +12,6 @@ const cabins = [
   },
   {
     id: 2,
-    name: 'Cabaña Bosque',
     icon: '🌲',
     gradient: 'linear-gradient(135deg, #1a3d08 0%, #2d6b15 100%)',
     capacity: 4,
@@ -23,7 +21,6 @@ const cabins = [
   },
   {
     id: 3,
-    name: 'Cabaña Lago',
     icon: '💧',
     gradient: 'linear-gradient(135deg, #0d3d3d 0%, #1a6b5c 100%)',
     capacity: 4,
@@ -33,7 +30,6 @@ const cabins = [
   },
   {
     id: 4,
-    name: 'Cabaña Cumbre',
     icon: '⛰️',
     gradient: 'linear-gradient(135deg, #5c3010 0%, #9c6830 100%)',
     capacity: 6,
@@ -45,7 +41,7 @@ const cabins = [
 
 export default function Cabins() {
   return (
-    <section id="cabanas" className="cabins">
+    <section className="cabins">
       <div className="section-container">
         <div className="section-header">
           <span className="section-tag">Alojamiento</span>
@@ -59,10 +55,10 @@ export default function Cabins() {
           {cabins.map(cabin => (
             <article key={cabin.id} className="cabin-card">
               <div className="cabin-header" style={{ background: cabin.gradient }}>
-                <span className="cabin-icon" role="img" aria-label={cabin.name}>{cabin.icon}</span>
+                <span className="cabin-icon" role="img" aria-label={`Cabaña ${cabin.id}`}>{cabin.icon}</span>
               </div>
               <div className="cabin-body">
-                <h3 className="cabin-name">{cabin.name}</h3>
+                <h3 className="cabin-name">Cabaña {cabin.id}</h3>
                 <p className="cabin-desc">{cabin.description}</p>
                 <div className="cabin-meta">
                   <span>
