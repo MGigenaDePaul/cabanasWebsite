@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -12,10 +18,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const isSolid = !isHome || scrolled
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+    <header className={`navbar${isSolid ? ' navbar--solid' : ''}${menuOpen ? ' navbar--menu-open' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <span className="navbar-star">★</span>
@@ -35,7 +42,7 @@ export default function Navbar() {
         <nav className={`navbar-nav${menuOpen ? ' navbar-nav--open' : ''}`}>
           <NavLink to="/cabanas" onClick={closeMenu}>Cabañas</NavLink>
           <NavLink to="/galeria" onClick={closeMenu}>Galería</NavLink>
-          <NavLink to="/contacto" onClick={closeMenu} className="navbar-nav-cta">Contacto</NavLink>
+          <NavLink to="/contacto" onClick={closeMenu} className={({ isActive }) => `navbar-nav-cta${isActive ? ' active' : ''}`}>Contacto</NavLink>
         </nav>
       </div>
     </header>

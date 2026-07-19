@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero'
 import './Cabins.css'
 
 const cabins = [
@@ -41,16 +42,14 @@ const cabins = [
 
 export default function Cabins() {
   return (
-    <section className="cabins">
+    <>
+      <PageHero
+        tag="Alojamiento"
+        title="Nuestras Cabañas"
+        description="Cuatro espacios únicos diseñados para que te desconectes del mundo y disfrutes de la naturaleza cordobesa con todo el confort."
+      />
+      <section className="cabins">
       <div className="section-container">
-        <div className="section-header">
-          <span className="section-tag">Alojamiento</span>
-          <h2 className="section-title">Nuestras Cabañas</h2>
-          <p className="section-desc">
-            Cuatro espacios únicos diseñados para que te desconectes del mundo y disfrutes de la naturaleza cordobesa con todo el confort.
-          </p>
-        </div>
-
         <div className="cabins-grid">
           {cabins.map(cabin => (
             <article key={cabin.id} className="cabin-card">
@@ -83,6 +82,7 @@ export default function Cabins() {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }
