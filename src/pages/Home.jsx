@@ -7,7 +7,7 @@ import './Home.css'
 
 const perks = [
   {
-    label: 'Pileta',
+    label: 'Pileta al aire libre',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
         <path d="M2 12h20M2 16c2-2 4 2 6 0s4-2 6 0 4 2 6 0M7 12V7a5 5 0 0 1 10 0v5" />
@@ -42,11 +42,21 @@ const perks = [
     ),
   },
   {
-    label: 'Smart TV',
+    label: 'Televisión',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
         <rect x="2" y="3" width="20" height="14" rx="2" />
         <path d="M8 21h8M12 17v4" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Cochera individual',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+        <path d="M3 9l2-5h14l2 5" />
+        <rect x="2" y="9" width="20" height="10" rx="1" />
+        <path d="M8 19v2M16 19v2M2 13h20" />
       </svg>
     ),
   },
