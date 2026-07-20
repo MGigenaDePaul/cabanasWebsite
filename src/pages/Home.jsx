@@ -5,70 +5,6 @@ import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.png'
 import './Home.css'
 
-const perks = [
-  {
-    label: 'Pileta al aire libre',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <path d="M2 12h20M2 16c2-2 4 2 6 0s4-2 6 0 4 2 6 0M7 12V7a5 5 0 0 1 10 0v5" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Parrilla privada',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <path d="M4 6h16M4 10h16M12 6v10M8 20h8M12 16v4" />
-        <path d="M6 2c0 2-2 3-2 5h4c0-2-2-3-2-5ZM18 2c0 2-2 3-2 5h4c0-2-2-3-2-5Z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'WiFi incluido',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0" />
-        <circle cx="12" cy="20" r="1" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Aire acondicionado',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="8" rx="2" />
-        <path d="M7 11v3m0 0-2 2m2-2 2 2M12 11v3m0 0-2 2m2-2 2 2M17 11v3m0 0-2 2m2-2 2 2" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Televisión',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8M12 17v4" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Cochera individual',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <path d="M3 9l2-5h14l2 5" />
-        <rect x="2" y="9" width="20" height="10" rx="1" />
-        <path d="M8 19v2M16 19v2M2 13h20" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Vista a las sierras',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
-        <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-      </svg>
-    ),
-  },
-]
 
 const previewCabins = [
   {
@@ -117,7 +53,7 @@ export default function Home() {
           </div>
         </div>
 
-        <a href="#perks" className="hero-scroll" aria-label="Ver más">
+        <a href="#cabanas" className="hero-scroll" aria-label="Ver más">
           <span>Ver más</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <polyline points="6 9 12 15 18 9" />
@@ -125,20 +61,7 @@ export default function Home() {
         </a>
       </section>
 
-      <div className="home-perks" id="perks">
-        <div className="section-container">
-          <div className="home-perks-grid">
-            {perks.map(p => (
-              <div key={p.label} className="home-perk">
-                <span className="home-perk-icon">{p.icon}</span>
-                <span className="home-perk-label">{p.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <section className="home-cabins">
+<section className="home-cabins" id="cabanas">
         <div className="section-container">
           <div className="section-header">
             <span className="section-tag">Alojamiento</span>
