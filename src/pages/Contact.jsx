@@ -1,17 +1,16 @@
+import PageHero from '../components/PageHero'
 import './Contact.css'
 
 export default function Contact() {
   return (
-    <section className="contact">
+    <>
+      <PageHero
+        tag="Hablemos"
+        title="Contacto"
+        description="¿Querés hacer una reserva o tenés alguna pregunta? Estamos para ayudarte."
+      />
+      <section className="contact">
       <div className="section-container">
-        <div className="section-header">
-          <span className="section-tag light">Hablemos</span>
-          <h2 className="section-title light">Contacto</h2>
-          <p className="section-desc light">
-            ¿Querés hacer una reserva o tenés alguna pregunta? Estamos para ayudarte.
-          </p>
-        </div>
-
         <div className="contact-grid">
           <a
             href="https://wa.me/5493516205470"
@@ -74,6 +73,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }
