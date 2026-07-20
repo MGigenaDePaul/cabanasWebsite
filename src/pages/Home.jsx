@@ -5,26 +5,6 @@ import image2 from '../assets/image2.png'
 import image3 from '../assets/image3.png'
 import './Home.css'
 
-
-const previewCabins = [
-  {
-    id: 1,
-    icon: '🌙',
-    gradient: 'linear-gradient(135deg, #2d5016 0%, #4a7c20 100%)',
-    capacity: 2,
-    beds: '1 cama matrimonial',
-    description: 'Ideal para parejas. Acogedora y romántica con vista a las sierras y todo lo que necesitás para descansar.',
-  },
-  {
-    id: 4,
-    icon: '⛰️',
-    gradient: 'linear-gradient(135deg, #5c3010 0%, #9c6830 100%)',
-    capacity: 6,
-    beds: '3 habitaciones',
-    description: 'Nuestra cabaña premium. El espacio ideal para grupos o familias que buscan el máximo confort.',
-  },
-]
-
 export default function Home() {
   return (
     <>
@@ -66,32 +46,6 @@ export default function Home() {
           <div className="section-header">
             <span className="section-tag">Alojamiento</span>
             <h2 className="section-title">Nuestras Cabañas</h2>
-            <p className="section-desc">
-              Cuatro opciones únicas para cada tipo de viajero, todas con WiFi, AC y cocina equipada.
-            </p>
-          </div>
-          <div className="home-cabins-grid">
-            {previewCabins.map(cabin => (
-              <article key={cabin.id} className="home-cabin-card">
-                <div className="home-cabin-header" style={{ background: cabin.gradient }}>
-                  <span className="home-cabin-icon" role="img" aria-label={`Cabaña ${cabin.id}`}>{cabin.icon}</span>
-                </div>
-                <div className="home-cabin-body">
-                  <h3 className="home-cabin-name">Cabaña {cabin.id}</h3>
-                  <p className="home-cabin-desc">{cabin.description}</p>
-                  <div className="home-cabin-meta">
-                    <span>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                      Hasta {cabin.capacity} personas
-                    </span>
-                    <span>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M2 9V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="M2 11h20"/><path d="M2 13v8h20v-8"/><path d="M10 13v8"/></svg>
-                      {cabin.beds}
-                    </span>
-                  </div>
-                </div>
-              </article>
-            ))}
           </div>
           <div className="home-section-cta">
             <Link to="/cabanas" className="home-btn">Ver todas las cabañas →</Link>
