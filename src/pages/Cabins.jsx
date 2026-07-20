@@ -56,13 +56,15 @@ const cabins = [
 ]
 
 const commonAmenities = [
-  { icon: '📶', text: 'WiFi de alta velocidad' },
-  { icon: '❄️', text: 'Aire acondicionado frío/calor' },
-  { icon: '🍳', text: 'Cocina equipada con heladera, anafe, microondas, cafetera y utensilios' },
-  { icon: '📺', text: 'Televisión' },
-  { icon: '🔥', text: 'Parrilla privada de uso exclusivo' },
-  { icon: '🚗', text: 'Cochera cubierta individual' },
-  { icon: '🛏️', text: 'Ropa de cama incluida' },
+  'WiFi de alta velocidad',
+  'Aire acondicionado frío/calor',
+  'Cocina completa con horno y microondas independiente',
+  'Heladera con freezer',
+  'Vajilla completa',
+  'Televisión',
+  'Parrilla privada de uso exclusivo',
+  'Cochera cubierta individual',
+  'Ropa de cama incluida',
 ]
 
 export default function Cabins() {
@@ -137,9 +139,9 @@ export default function Cabins() {
             </p>
             <ul className="modal-amenities">
               {commonAmenities.map(item => (
-                <li key={item.text}>
-                  <span className="amenity-icon" aria-hidden="true">{item.icon}</span>
-                  {item.text}
+                <li key={item}>
+                  <span className="feature-check" aria-hidden="true">✓</span>
+                  {item}
                 </li>
               ))}
             </ul>
