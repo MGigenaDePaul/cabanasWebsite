@@ -7,13 +7,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  max-width: 780px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 560px) {
   .contact-grid {
     grid-template-columns: 1fr;
+    max-width: 420px;
   }
 }
 
@@ -83,9 +84,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-dark);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-all;
 }
 
 .contact-subtitle {

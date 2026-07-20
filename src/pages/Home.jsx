@@ -29,7 +29,6 @@ export default function Home() {
               </svg>
               Reservar por WhatsApp
             </a>
-            <Link to="/cabanas" className="hero-cta-alt">Ver Cabañas</Link>
           </div>
         </div>
 
