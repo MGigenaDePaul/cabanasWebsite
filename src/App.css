@@ -1,1 +1,3 @@
-/* styles live in index.css and per-component CSS files */
+main {
+  flex: 1;
+}

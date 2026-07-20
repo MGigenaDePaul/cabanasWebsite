@@ -108,26 +108,6 @@
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.55);
 }
 
-.hero-cta-alt {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  padding: 0.875rem 1.75rem;
-  border-radius: 3rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  backdrop-filter: blur(4px);
-}
-
-.hero-cta-alt:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.6);
-  transform: translateY(-2px);
-}
 
 .hero-scroll {
   position: absolute;
