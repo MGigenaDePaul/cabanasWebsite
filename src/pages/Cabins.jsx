@@ -4,6 +4,7 @@ import './Cabins.css'
 const cabins = [
   {
     id: 1,
+    name: 'Herencia',
     icon: '🌙',
     gradient: 'linear-gradient(135deg, #2d5016 0%, #4a7c20 100%)',
     capacity: '5',
@@ -13,6 +14,7 @@ const cabins = [
   },
   {
     id: 2,
+    name: 'Escudo',
     icon: '🌲',
     gradient: 'linear-gradient(135deg, #1a3d08 0%, #2d6b15 100%)',
     capacity: '2 a 3',
@@ -22,6 +24,7 @@ const cabins = [
   },
   {
     id: 3,
+    name: 'Refugio',
     icon: '💧',
     gradient: 'linear-gradient(135deg, #0d3d3d 0%, #1a6b5c 100%)',
     capacity: '6 a 7',
@@ -31,6 +34,7 @@ const cabins = [
   },
   {
     id: 4,
+    name: 'Fortaleza',
     icon: '⛰️',
     gradient: 'linear-gradient(135deg, #5c3010 0%, #9c6830 100%)',
     capacity: '7 a 8',
@@ -40,6 +44,7 @@ const cabins = [
   },
   {
     id: 5,
+    name: 'Roca Fuerte',
     icon: '🌿',
     gradient: 'linear-gradient(135deg, #1a4040 0%, #2e7070 100%)',
     capacity: '4',
@@ -66,7 +71,7 @@ export default function Cabins() {
                 <span className="cabin-icon" role="img" aria-label={`Cabaña ${cabin.id}`}>{cabin.icon}</span>
               </div>
               <div className="cabin-body">
-                <h3 className="cabin-name">Cabaña {cabin.id}</h3>
+                <h3 className="cabin-name">Cabaña {cabin.id} — {cabin.name}</h3>
                 <p className="cabin-desc">{cabin.description}</p>
                 <div className="cabin-meta">
                   <span>
