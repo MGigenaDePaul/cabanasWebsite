@@ -1,50 +1,92 @@
 .page-hero {
-  background: linear-gradient(135deg, var(--green-dark) 0%, #3a6b1a 60%, var(--green) 100%);
-  padding: 8.5rem 2rem 3.5rem;
+  background: linear-gradient(150deg, #1a3d08 0%, #2d6b15 55%, #3a6b1a 100%);
+  padding: 10rem 2rem 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
+/* Radial glow top-right */
 .page-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 0%, rgba(245, 200, 66, 0.07) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse at 75% -10%, rgba(245, 200, 66, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(0, 0, 0, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Dot pattern */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
 }
 
 .page-hero-inner {
   position: relative;
-  max-width: 680px;
+  z-index: 1;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .page-hero-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--star-gold);
-  background: rgba(245, 200, 66, 0.15);
-  padding: 0.35rem 1rem;
+  background: rgba(245, 200, 66, 0.12);
+  border: 1px solid rgba(245, 200, 66, 0.25);
+  padding: 0.4rem 1.1rem;
   border-radius: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.page-hero-tag::before,
+.page-hero-tag::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: rgba(245, 200, 66, 0.45);
 }
 
 .page-hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: #fff;
-  margin: 0 0 0.75rem;
+  margin: 0 0 1rem;
   font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .page-hero-desc {
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 500px;
+  color: rgba(255, 255, 255, 0.68);
+  max-width: 480px;
   margin: 0 auto;
   line-height: 1.75;
   font-size: 1rem;
+}
+
+/* Bottom wave */
+.page-hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+}
+
+.page-hero-wave svg {
+  display: block;
+  width: 100%;
 }

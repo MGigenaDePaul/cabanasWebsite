@@ -1,90 +1,110 @@
 .contact {
   padding: 4rem 2rem;
-  background: var(--green-dark);
+  background: var(--cream);
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* Card */
 .contact-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: #fff;
   border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  color: #fff;
-  display: block;
-  transition: background 0.25s, transform 0.25s;
+  padding: 1.5rem 1.25rem;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border: 1px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
 }
 
-a.contact-card:hover {
-  background: rgba(255, 255, 255, 0.13);
-  transform: translateY(-5px);
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.11);
 }
 
-.contact-card--static {
-  cursor: default;
-}
+.contact-card--whatsapp:hover  { border-color: #25d366; }
+.contact-card--instagram:hover { border-color: #e1306c; }
+.contact-card--email:hover     { border-color: #63b3ed; }
+.contact-card--location:hover  { border-color: var(--green); }
 
-.contact-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  margin: 0 0 0.4rem;
-  color: #fff;
-}
-
-.contact-card p {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.65);
-  margin: 0;
-}
-
-.contact-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
+/* Icon */
+.contact-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.25rem;
+  flex-shrink: 0;
 }
 
-.contact-icon svg {
+.contact-icon-wrap svg {
   width: 26px;
   height: 26px;
 }
 
-.contact-icon--whatsapp {
-  background: rgba(37, 211, 102, 0.18);
-  color: #25d366;
+.contact-card--whatsapp  .contact-icon-wrap { background: rgba(37, 211, 102, 0.12); color: #25d366; }
+.contact-card--instagram .contact-icon-wrap { background: rgba(225, 48, 108, 0.1);  color: #e1306c; }
+.contact-card--email     .contact-icon-wrap { background: rgba(99, 179, 237, 0.12); color: #63b3ed; }
+.contact-card--location  .contact-icon-wrap { background: rgba(74, 124, 32, 0.1);   color: var(--green); }
+
+/* Text */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
 }
 
-.contact-icon--email {
-  background: rgba(99, 179, 237, 0.18);
-  color: #63b3ed;
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-mid);
 }
 
-.contact-icon--instagram {
-  background: rgba(240, 100, 60, 0.18);
-  color: #f0643c;
+.contact-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.contact-icon--location {
-  background: rgba(245, 200, 66, 0.18);
-  color: var(--star-gold);
+.contact-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-mid);
+}
+
+/* Arrow */
+.contact-arrow {
+  width: 18px;
+  height: 18px;
+  color: var(--text-mid);
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.contact-card:hover .contact-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
